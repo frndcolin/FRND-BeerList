@@ -15,5 +15,19 @@
   "bugs": {
     "url": "https://github.com/frndcolin/FRND-BeerList/issues"
   },
-  "homepage": "https://github.com/frndcolin/FRND-BeerList#readme"
+  "homepage": "https://github.com/frndcolin/FRND-BeerList#readme",
+  "dependencies": {
+    "@gridsome/plugin-sitemap": "^0.2.3",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.4.0",
+    "bootstrap-vue": "^2.0.4",
+    "gridsome": "^0.7.9"
+  },
+  "devDependencies": {
+    "gridsome-plugin-pug": "0.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "style-resources-loader": "^1.2.1",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2"
+  }
 }
