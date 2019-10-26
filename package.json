@@ -1,0 +1,19 @@
+{
+  "name": "frnd-beerlist",
+  "version": "1.0.0",
+  "description": "Simple app for tracking the beers we have tried",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frndcolin/FRND-BeerList.git"
+  },
+  "author": "Colin Friend (frnd.colin@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frndcolin/FRND-BeerList/issues"
+  },
+  "homepage": "https://github.com/frndcolin/FRND-BeerList#readme"
+}
