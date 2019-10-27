@@ -4,8 +4,7 @@
       b-navbar-brand
         g-link.logo-home.logo-desktop(to="/") {{ $static.metadata.siteName }}
       b-navbar-nav.ml-auto
-        b-nav-item
-          g-link.nav--link(to="/beer") Beers
+        b-nav-item.nav--link(href="/beer") Beers
         b-nav-item.nav--link(href="/admin/") Add Beer
 
 
