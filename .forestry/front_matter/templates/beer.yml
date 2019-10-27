@@ -1,4 +1,37 @@
 ---
 label: Beer
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: false
+  label: Name
+  description: Name of the beer
+- name: brewery
+  type: text
+  config:
+    required: false
+  label: Brewery
+  description: Brewery Name
+- name: hops
+  type: text
+  config:
+    required: false
+  label: Hops
+  description: List of hops
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
+  description: Image of the can
+- name: date
+  type: datetime
+  label: Date
+  description: Date we tried the beer
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
