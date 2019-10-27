@@ -9,7 +9,7 @@ sections:
   label: Beers
   create: documents
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - beer
 upload_dir: uploads
