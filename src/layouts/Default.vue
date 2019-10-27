@@ -1,7 +1,8 @@
 <template lang="pug">
   .layout
     the-header
-    slot
+    #main
+      slot
     the-footer
 </template>
 
@@ -26,8 +27,15 @@ body
   margin 0
   padding 0
 .layout
+  background-image url('../assets/images/site-bg.jpg')
+  background-origin border-box
+  background-position center bottom
+  background-repeat no-repeat
+  background-size cover
   margin 0
   min-height 100vh
   padding 0
   width 100%
+#main
+  min-height 90vh
 </style>

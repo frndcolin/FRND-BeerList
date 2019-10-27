@@ -1,13 +1,12 @@
 <template lang="pug">
   b-navbar
     b-container
-      b-navbar-brand
-        g-link.logo-home.logo-desktop(to="/") {{ $static.metadata.siteName }}
-      b-navbar-nav.ml-auto
-        b-nav-item.nav--link(href="/beer") Beers
-        b-nav-item.nav--link(href="/admin/") Add Beer
-
-
+      b-navbar-brand(href="/") {{ $static.metadata.siteName }}
+      b-navbar-toggle(target='nav-collapse')
+      b-collapse#nav-collapse(is-nav)
+        b-navbar-nav.ml-auto
+          b-nav-item.nav--link(href="/beer") Beers
+          b-nav-item.nav--link(href="/admin/") Add Beer
 </template>
 
 <static-query>

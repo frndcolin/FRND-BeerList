@@ -2,11 +2,11 @@
   layout
     g-image.beerImage.mb-4(immediate :src="$page.post.image")
     .beerPost
-      h1.mb-4( v-html="$page.post.title")
+      h1.mb-4( v-html="$page.post.name")
       .meta
         .box.author
           span.label Author
-          span.author-name(v-text="$page.post.author")
+          span.author-name(v-text="$page.post.brewery")
         .box.date
           span.label Date
           div(v-text="new Date($page.post.date).toLocaleDateString()")
@@ -19,8 +19,8 @@
 <page-query>
 query BeerPost ($path: String!) {
   post: beerPost (path: $path) {
-    title
-    author
+    name
+    brewery
     date
     timeToRead
     content

@@ -1,21 +1,26 @@
 <template lang="pug">
   layout
-    b-container
+    b-container.main
       b-row(align-h='center')
         b-col(cols='8')
-          img.greet-image(src="../../uploads/beerbeerbeer.jpg")
+          h1 Beers! Beers! Beers!
 
       b-row(align-h='center')
-        b-col(cols='6')
+        b-card-group(deck)
           g-link(
             :to="item.node.path"
             v-for="item in $page.beer.edges"
             :key="item.node.id"
             class="beer-post"
             )
-            .media
-              .media-body
-                h5.mt-0 {{item.node.name}}, {{ item.node.brewery }}
+            b-card.beer-card(
+              :title="item.node.name"
+              :sub-title="item.node.brewery"
+              :img-src="item.node.image"
+              img-top
+            )
+              b-card-text
+                h5 Test Beer card
 </template>
 
 <script>
@@ -35,18 +40,20 @@ query Beer {
         path
         name
         brewery
+        image
       }
     }
   }
 }
 </page-query>
 
-<style>
-.greet-image {
-  display: block;
-  margin: auto;
-  width: 90%;
-  max-width: 500px;
-  padding-bottom: 50px;
-}
+<style lang="stylus">
+.beer-card
+  background #ffffff
+.greet-image
+  display block
+  margin auto
+  max-width 500px
+  padding-bottom 50px
+  width 90%
 </style>
