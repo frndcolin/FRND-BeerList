@@ -4,7 +4,9 @@
   "description": "Simple app for tracking the beers we have tried",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gridsome build",
+    "dev": "gridsome develop",
+    "explore": "gridsome explore"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "gridsome-plugin-pug": "0.0.3",
+    "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "style-resources-loader": "^1.2.1",
     "stylus": "^0.54.7",

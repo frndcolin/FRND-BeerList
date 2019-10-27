@@ -11,15 +11,15 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome starter bootstrap',
-  siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
+  siteName: 'FRND Beer List',
+  siteDescription: 'A simple app to track the beers we have tried.',
   siteUrl: 'https://gridsome-starter-bootstrap.loke.dev',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'blog/**/*.md',
-        typeName: 'BlogPost',
+        path: 'beers/**/*.md',
+        typeName: 'BeerPost',
         resolveAbsolutePaths: true,
         remark: {
           externalLinksTarget: '_blank',

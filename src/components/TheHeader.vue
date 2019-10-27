@@ -1,20 +1,16 @@
 <template lang="pug">
   .header
-    b-navbar.p-0(toggleable="md" type="light")
+    b-navbar.p-0(type="light")
       b-navbar-brand
-        g-link.logo-home.logo-desktop(to="/") {{ $static.metaData.siteName }}
-        g-link.logo-home.logo–mobile(to="/")
-          img.logo-image(alt="logo" src="../assets/images/logo.png")
-      b-navbar-toggle(target="nav_collapse")
-      b-collapse#nav_collapse(is-nav)
-        b-navbar-nav.ml-auto
-          g-link.nav--link(to="/about") Beers
-          g-link.nav--link(to="/blog") Add Beer
+        g-link.logo-home.logo-desktop(to="/") {{ $static.metadata.siteName }}
+      b-navbar-nav.ml-auto(is-nav)
+        g-link.nav--link(to="/beer") Beers
+        g-link.nav--link(to="/admin/") Add Beer
 </template>
 
 <static-query>
 query {
-  metaData {
+  metadata {
     siteName
   }
 }

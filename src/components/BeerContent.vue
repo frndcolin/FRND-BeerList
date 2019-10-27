@@ -1,5 +1,5 @@
-<template>
-  <div class="blog-content" v-html="content" />
+<template lang="pug">
+  .blog-content(v-html="content")
 </template>
 
 <script>

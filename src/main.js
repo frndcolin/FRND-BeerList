@@ -1,9 +1,9 @@
-import DefaultLayout from '~/layouts/Default.vue'
-
-import BootstrapVue from 'bootstrap-vue'
-import './assets/styles/main.scss'
-
 import checkIfMobile from './mixins/checkIfMobile'
+import DefaultLayout from '~/layouts/Default.vue'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import './assets/styles/main.scss'
 
 export default function (Vue, { router, head, isClient }) {
   Vue.use(BootstrapVue)
