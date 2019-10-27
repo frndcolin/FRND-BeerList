@@ -15,8 +15,8 @@
             .media
               g-image.mr-3(immediate :src="item.node.image" alt="image")
               .media-body
-                h5.mt-0 {{item.node.title}}
-                p.text-dark {{item.node.excerpt}}
+                h5.mt-0 {{item.node.name}}
+                p.text-dark {{item.node.brewery}}
 </template>
 
 <page-query>
@@ -26,8 +26,8 @@ query Beer {
       node {
         id
         path
-        title
-        excerpt
+        name
+        brewery
         image
       }
     }

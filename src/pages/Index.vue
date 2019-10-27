@@ -15,7 +15,7 @@
             )
             .media
               .media-body
-                h5.mt-0 {{item.node.title}}
+                h5.mt-0 {{item.node.name}}, {{ item.node.brewery }}
 </template>
 
 <script>
@@ -33,9 +33,8 @@ query Beer {
       node {
         id
         path
-        title
-        excerpt
-        image
+        name
+        brewery
       }
     }
   }
