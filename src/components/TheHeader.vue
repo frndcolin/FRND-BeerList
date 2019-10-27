@@ -1,11 +1,14 @@
 <template lang="pug">
-  .header
-    b-navbar.p-0(type="light")
+  b-navbar
+    b-container
       b-navbar-brand
         g-link.logo-home.logo-desktop(to="/") {{ $static.metadata.siteName }}
-      b-navbar-nav.ml-auto(is-nav)
-        g-link.nav--link(to="/beer") Beers
-        g-link.nav--link(to="/admin/") Add Beer
+      b-navbar-nav.ml-auto
+        b-nav-item
+          g-link.nav--link(to="/beer") Beers
+        b-nav-item.nav--link(href="/admin/") Add Beer
+
+
 </template>
 
 <static-query>
@@ -20,11 +23,6 @@ query {
 nav
   padding-top 1rem
   width 100%
-.header
-  align-items center
-  display flex
-  justify-content space-between
-  margin-bottom 20px
 .logo-home
   font-size 24px
   font-weight bold

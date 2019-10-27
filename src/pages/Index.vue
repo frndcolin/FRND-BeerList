@@ -1,7 +1,21 @@
 <template lang="pug">
   layout
-    img.greet-image(src="../../uploads/hello.svg")
-    h3.mt-5.mb-4 Getting started
+    b-container
+      b-row(align-h='center')
+        b-col(cols='8')
+          img.greet-image(src="../../uploads/beerbeerbeer.jpg")
+
+      b-row(align-h='center')
+        b-col(cols='6')
+          g-link(
+            :to="item.node.path"
+            v-for="item in $page.beer.edges"
+            :key="item.node.id"
+            class="beer-post"
+            )
+            .media
+              .media-body
+                h5.mt-0 {{item.node.title}}
 </template>
 
 <script>
@@ -11,6 +25,22 @@ export default {
   }
 };
 </script>
+
+<page-query>
+query Beer {
+	beer: allBeerPost(sortBy: "date") {
+    edges {
+      node {
+        id
+        path
+        title
+        excerpt
+        image
+      }
+    }
+  }
+}
+</page-query>
 
 <style>
 .greet-image {
