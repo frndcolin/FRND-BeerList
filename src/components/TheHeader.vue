@@ -5,7 +5,7 @@
       b-navbar-toggle(target='nav-collapse')
       b-collapse#nav-collapse(is-nav)
         b-navbar-nav.ml-auto
-          b-nav-item.nav--link(href="/beer") Beers
+          b-nav-item.nav--link(href="/beer/") Beers
           b-nav-item.nav--link(href="/admin/") Add Beer
 </template>
 
