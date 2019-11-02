@@ -35,9 +35,6 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
-- name: caitie_thumbsup
-  type: boolean
-  label: Caitie thumbs up
 - name: caitie_rating
   type: select
   default: ''
