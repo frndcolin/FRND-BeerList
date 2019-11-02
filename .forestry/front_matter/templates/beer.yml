@@ -35,5 +35,42 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: caitie_thumbsup
+  type: boolean
+  label: Caitie thumbs up
+- name: caitie_rating
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Caitie rating
+- name: colin_rating
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Colin rating
 pages:
 - beers/itsallgoodbabybaby.md
