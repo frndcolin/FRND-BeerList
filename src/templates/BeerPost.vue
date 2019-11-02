@@ -11,6 +11,13 @@
           )
             b-card-text {{ $page.post.description || '' }}
             b-card-text {{ $page.post.hops || '' }}
+            b-card-text
+              p.stars.
+                {{ $page.post.colin_rating - 1 >= 0 ? '&#9733;' : '&#9734;' }}
+                {{ $page.post.colin_rating - 2 >= 0 ? '&#9733;' : '&#9734;' }}
+                {{ $page.post.colin_rating - 3 >= 0 ? '&#9733;' : '&#9734;' }}
+                {{ $page.post.colin_rating - 4 >= 0 ? '&#9733;' : '&#9734;' }}
+                {{ $page.post.colin_rating - 5 >= 0 ? '&#9733;' : '&#9734;' }}
             b-card-text {{ new Date($page.post.date).toLocaleDateString() }}
 </template>
 
@@ -23,6 +30,7 @@ query BeerPost ($path: String!) {
     timeToRead
     content
     image
+    colin_rating
   }
 }
 </page-query>
@@ -56,4 +64,8 @@ export default {
   width 100%
 .beer-post
   padding-top 80px
+.stars
+  color orange
+  &:hover
+    cursor default
 </style>
