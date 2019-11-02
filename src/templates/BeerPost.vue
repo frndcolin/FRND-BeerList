@@ -1,19 +1,17 @@
 <template lang="pug">
   layout
-    g-image.beerImage.mb-4(immediate :src="$page.post.image")
-    .beerPost
-      h1.mb-4( v-html="$page.post.name")
-      .meta
-        .box.author
-          span.label Author
-          span.author-name(v-text="$page.post.brewery")
-        .box.date
-          span.label Date
-          div(v-text="new Date($page.post.date).toLocaleDateString()")
-        .box.time
-          span.label Time
-          span {{ $page.post.timeToRead }} min read
-      beer-content.mt-5(:content="$page.post.content")
+    b-container.beer-post
+      b-row(align-h='center')
+        b-col(cols='12' md='5')
+          b-card(
+            :img-src="$page.post.image.src"
+            img-height='320px'
+            :title="$page.post.name"
+            :sub-title='$page.post.brewery'
+          )
+            b-card-text {{ $page.post.description || '' }}
+            b-card-text {{ $page.post.hops || '' }}
+            b-card-text {{ new Date($page.post.date).toLocaleDateString() }}
 </template>
 
 <page-query>
@@ -56,4 +54,6 @@ export default {
 .beerImage
   max-height 400px
   width 100%
+.beer-post
+  padding-top 80px
 </style>

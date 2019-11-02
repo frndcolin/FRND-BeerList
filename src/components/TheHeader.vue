@@ -1,11 +1,10 @@
 <template lang="pug">
-  b-navbar
+  b-navbar(variant='light')
     b-container
       b-navbar-brand(href="/") {{ $static.metadata.siteName }}
       b-navbar-toggle(target='nav-collapse')
       b-collapse#nav-collapse(is-nav)
         b-navbar-nav.ml-auto
-          b-nav-item.nav--link(href="https://tender-almeida-c810f3.netlify.com/beer/") Beers
           b-nav-item.nav--link(href="/admin/") Add Beer
 </template>
 
