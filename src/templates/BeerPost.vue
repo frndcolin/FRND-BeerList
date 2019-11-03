@@ -24,7 +24,7 @@ query BeerPost ($path: String!) {
     brewery
     date
     timeToRead
-    content
+    description
     image
     colin_rating
   }

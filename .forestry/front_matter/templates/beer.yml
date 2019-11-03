@@ -80,4 +80,5 @@ fields:
   label: Description
   description: Description of beer
 pages:
+- beers/SpecialBrownies.md
 - beers/itsallgoodbabybaby.md
