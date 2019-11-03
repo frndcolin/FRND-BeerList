@@ -11,7 +11,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'FRND Beer List',
+  siteName: 'Beer List',
   siteDescription: 'A simple app to track the beers we have tried.',
   siteUrl: 'https://gridsome-starter-bootstrap.loke.dev',
   plugins: [

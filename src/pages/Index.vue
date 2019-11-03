@@ -29,7 +29,7 @@ import Stars from "@/components/Stars.vue";
 export default {
   components: { Stars },
   metaInfo: {
-    title: "FRND-Beer-List"
+    title: "Friend Beer List"
   }
 };
 </script>
