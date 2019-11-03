@@ -5,7 +5,7 @@
         b-col(cols='8')
           h1.title Beers! Beers! Beers!
       b-row(align-h='center')
-        b-col(cols='6')
+        b-col(cols='12' sm='10' md='6')
           ul.beer-card--wrapper
             li.beer-card(
               v-for="item in $page.beer.edges"
@@ -18,10 +18,16 @@
                 span.beer-card--date {{ item.node.date.split('T')[0] }}
                 p.beer-card--brewery.
                   {{ item.node.brewery }}
+                .beer-card--stars
+                  stars(:ratingScore='item.node.colin_rating' ratedBy='Colin' starColor='blue')
+                  stars(:ratingScore='item.node.caitie_rating' ratedBy='Caitie' starColor='orange')
 </template>
 
 <script>
+import Stars from "@/components/Stars.vue";
+
 export default {
+  components: { Stars },
   metaInfo: {
     title: "FRND-Beer-List"
   }
@@ -39,6 +45,8 @@ query Beer {
         brewery
         image
         date
+        colin_rating
+        caitie_rating
       }
     }
   }
@@ -63,8 +71,8 @@ query Beer {
     padding-left 24px
     position relative
   &--date
-    color #9f9f9f
-    font-size 14px
+    color #cfcfcf
+    font-size 10px
     position absolute
     right 8px
     top 4px
@@ -74,14 +82,20 @@ query Beer {
     font-weight bold
     letter-spacing 0.025em
   &--brewery
-    color #a7a7a7
-    font-size 20px
+    color #a3a3a3
+    font-size 16px
     font-weight 600
     letter-spacing 0.025em
-    padding-top 4px
+    margin-top 2px
   &--wrapper
     list-style none
     padding 40px 0 0 0
+  &--stars
+    display flex
+    justify-content flex-end
+    line-height 0.85em
+    div
+      margin-left 16px
   &--thumbnail
     position relative
     img
@@ -98,4 +112,11 @@ query Beer {
       position absolute
       top 0
       width 100%
+@media only screen and (max-width: 600px)
+  .beer-card--content
+    padding-left 0
+  .beer-card--thumbnail
+    display none
+  .beer-card--stars
+    font-size 12px
 </style>

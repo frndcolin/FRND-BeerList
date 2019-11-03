@@ -12,13 +12,9 @@
             b-card-text {{ $page.post.description || '' }}
             b-card-text {{ $page.post.hops || '' }}
             b-card-text
-              p.stars.
-                {{ $page.post.colin_rating - 1 >= 0 ? '&#9733;' : '&#9734;' }}
-                {{ $page.post.colin_rating - 2 >= 0 ? '&#9733;' : '&#9734;' }}
-                {{ $page.post.colin_rating - 3 >= 0 ? '&#9733;' : '&#9734;' }}
-                {{ $page.post.colin_rating - 4 >= 0 ? '&#9733;' : '&#9734;' }}
-                {{ $page.post.colin_rating - 5 >= 0 ? '&#9733;' : '&#9734;' }}
-            b-card-text {{ new Date($page.post.date).toLocaleDateString() }}
+              stars(:ratingScore='$page.post.colin_rating' ratedBy='Colin' starColor='blue')
+              stars(:ratingScore='$page.post.caitie_rating' ratedBy='Caitie' starColor='orange')
+            b-card-text.date {{ new Date($page.post.date).toLocaleDateString() }}
 </template>
 
 <page-query>
@@ -37,10 +33,12 @@ query BeerPost ($path: String!) {
 
 <script>
 import BeerContent from "@/components/BeerContent";
+import Stars from "@/components/Stars.vue";
 
 export default {
   components: {
-    BeerContent
+    BeerContent,
+    Stars
   },
   metaInfo() {
     return {
@@ -68,4 +66,8 @@ export default {
   color orange
   &:hover
     cursor default
+.date
+  color #9f9f9f
+  font-size 16px
+  text-align right
 </style>
